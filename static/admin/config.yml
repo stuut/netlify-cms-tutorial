@@ -10,6 +10,5 @@ collections:
     folder: src/blog
     create: true
     fields:
-      - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
