@@ -2,7 +2,7 @@ backend:
   name: github
   repo: stuut/netlify-cms-tutorial
 
-media_folder: static/assets
+media_folder: static/img
 public_folder: /img
 
 collections:
