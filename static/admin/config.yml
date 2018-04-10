@@ -3,6 +3,7 @@ backend:
   repo: stuut/netlify-cms-tutorial
 
 media_folder: static/assets
+public_folder: /img
 
 collections:
   - name: blog
