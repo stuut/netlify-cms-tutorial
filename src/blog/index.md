@@ -1,11 +1,16 @@
 ---
 title: My Second Post!
-date: "2015-05-06T23:46:37.121Z"
-tags: ["animals", "Chicago", "zoos"]
-path: "/my-second-post"
+date: '2015-05-06T23:46:37.121Z'
+description: >+
+  Did you know that "despite its name, salted duck eggs can also be made from
+  chicken eggs, though the taste and texture will be somewhat different, and the
+  egg yolk will be less rich."? (Wikipedia Link)
 
+tags:
+  - animals
+  - Chicago
+  - zoos
 ---
-
 Wow! I love blogging so much already.
 
 Did you know that "despite its name, salted duck eggs can also be made from
@@ -14,3 +19,5 @@ egg yolk will be less rich."?
 ([Wikipedia Link](http://en.wikipedia.org/wiki/Salted_duck_egg))
 
 Yeah, I didn't either.
+
+Lorem ipsum dolor amet selvage art party typewriter meh, raclette banh mi street art green juice palo santo disrupt humblebrag etsy. DIY distillery hashtag hexagon mustache offal thundercats chia slow-carb kitsch salvia. Chia wolf ennui hot chicken, pug tofu sustainable quinoa bespoke pickled cray sriracha shabby chic raw denim. Food truck meggings echo park, messenger bag snackwave kickstarter hell of irony gentrify marfa franzen.
