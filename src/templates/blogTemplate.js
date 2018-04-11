@@ -9,7 +9,7 @@ export default function Template({data, featuredimage}) {
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-      <img src={post.frontmatter.image.childImageSharp.responsiveSizes.base64} width="100%" data-src={post.frontmatter.image.childImageSharp.responsiveSizes.src} data-srcset={post.frontmatter.image.childImageSharp.responsiveSizes.srcSet} data-sizes={post.frontmatter.image.childImageSharp.responsiveSizes.sizes} className="lazyload" alt={post.frontmatter.title}/>
+      <img src={post.frontmatter.image.} />
 
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
@@ -35,14 +35,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        image {
-         childImageSharp {
-           responsiveSizes(maxWidth: 400) {
-             src
-             srcSet
-             sizes
-           }
-         }
+        image
        }
       }
     }
