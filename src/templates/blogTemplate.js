@@ -9,7 +9,6 @@ export default function Template({data, featuredimage}) {
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-      <img src={post.frontmatter.image.} />
 
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
@@ -32,7 +31,6 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        image
        }
       }
     }
