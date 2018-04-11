@@ -2,7 +2,8 @@ import React from "react";
 import Img from "gatsby-image";
 
 
-export default function Template({data, }) {
+
+export default function Template({data, featuredImage}) {
   const { markdownRemark } = data; // data.markdownRemark holds our post data
   const { frontmatter, html } = markdownRemark;
   return (
