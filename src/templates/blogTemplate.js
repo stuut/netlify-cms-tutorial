@@ -1,6 +1,9 @@
-import React from "react";
-import Img from "gatsby-image";
+import React from "react"
+import Img from "gatsby-image"
 import PropTypes from 'prop-types'
+import Features from '../components/Features'
+import Testimonials from '../components/Testimonials'
+import Pricing from '../components/Pricing'
 
 
 
