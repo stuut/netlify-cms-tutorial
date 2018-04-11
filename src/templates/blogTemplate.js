@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 
 
 
-export const BlogTemplate = ({
+export const BlogPageTemplate = ({
   image,
   title,
   heading,
@@ -106,7 +106,7 @@ export const BlogTemplate = ({
   </section>
 )
 
-ProductPageTemplate.propTypes = {
+BlogPageTemplate.propTypes = {
   image: PropTypes.string,
   title: PropTypes.string,
   heading: PropTypes.string,
@@ -130,7 +130,7 @@ ProductPageTemplate.propTypes = {
   }),
 }
 
-const ProductPage = ({ data }) => {
+const BlogPage = ({ data }) => {
   const { frontmatter } = data.markdownRemark
 
   return (
@@ -148,7 +148,7 @@ const ProductPage = ({ data }) => {
   )
 }
 
-ProductPage.propTypes = {
+BlogPage.propTypes = {
   data: PropTypes.shape({
     markdownRemark: PropTypes.shape({
       frontmatter: PropTypes.object,
@@ -156,9 +156,9 @@ ProductPage.propTypes = {
   }),
 }
 
-export default ProductPage
+export default BlogPage
 
-export const productPageQuery = graphql`
+export const BlogPageQuery = graphql`
   query ProductPage($id: String!) {
     markdownRemark(id: { eq: $id }) {
       frontmatter {
