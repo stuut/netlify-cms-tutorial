@@ -22,10 +22,7 @@ export default function Template({data, featuredimage}) {
   );
 }
 
-ProductPageTemplate.propTypes = {
-  image: PropTypes.string,
 
-}
 
 export const pageQuery = graphql`
   query BlogPostByPath($path: String!) {
