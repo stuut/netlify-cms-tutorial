@@ -7,21 +7,19 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
 
   return graphql(`
     {
-    allMarkdownRemark(limit: 1000) {
-      edges {
-        node {
-          id
-          fields {
-            slug
-          }
-          frontmatter {
-            tags
-            templateKey
+      allMarkdownRemark(
+        sort: { order: DESC, fields: [frontmatter___date] }
+        limit: 1000
+      ) {
+        edges {
+          node {
+            frontmatter {
+              path
+            }
           }
         }
       }
     }
-  }
   `).then(result => {
     if (result.errors) {
       return Promise.reject(result.errors);
