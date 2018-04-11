@@ -1,6 +1,5 @@
-import React from "react";
-import Img from "gatsby-image";
-import PropTypes from 'prop-types'
+import React from "react"
+import Img from 'gatsby-image'
 
 
 
@@ -10,7 +9,7 @@ export default function Template({data, featuredimage}) {
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-      <img sizes={post.frontmatter.image.childImageSharp.sizes}></img>
+      <img src={post.frontmatter.image.childImageSharp.responsiveSizes.base64} width="100%" data-src={post.frontmatter.image.childImageSharp.responsiveSizes.src} data-srcset={post.frontmatter.image.childImageSharp.responsiveSizes.srcSet} data-sizes={post.frontmatter.image.childImageSharp.responsiveSizes.sizes} className="lazyload" alt={post.frontmatter.title}/>
 
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
@@ -37,15 +36,14 @@ export const pageQuery = graphql`
         path
         title
         image {
-          childImageSharp {
-            resize(width: 1500, height: 1500) {
-              src
-            }
-            sizes(maxWidth: 786) {
-              ...GatsbyImageSharpSizes
-            }
-          }
-        }
+         childImageSharp {
+           responsiveSizes(maxWidth: 400) {
+             src
+             srcSet
+             sizes
+           }
+         }
+       }
       }
     }
   }

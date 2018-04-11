@@ -15,16 +15,7 @@ exports.createPages = ({ boundActionCreators, graphql }) => {
           node {
             frontmatter {
               path
-              image {
-                childImageSharp {
-                  resize(width: 1500, height: 1500) {
-                    src
-                  }
-                  sizes(maxWidth: 786) {
-                    ...GatsbyImageSharpSizes
-                  }
-                }
-              }
+              
             }
           }
         }
