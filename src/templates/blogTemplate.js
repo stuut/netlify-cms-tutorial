@@ -8,7 +8,7 @@ export default function Template({data, }) {
   return (
     <div className="blog-post-container">
       <div className="blog-post">
-        <Img resolutions={frontmatter.childImageSharp} />
+        <Img resolutions={frontmatter.image} />
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
         <div
@@ -29,7 +29,14 @@ export const pageQuery = graphql`
         path
         title
         image {
-          childImageSharp 
+          childImageSharp {
+          resolutions(width: 400) {
+            width
+            height
+            src
+            srcSet
+            }
+          }
         }
       }
     }
